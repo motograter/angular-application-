@@ -1,0 +1,23 @@
+:host {
+  color: blueviolet;
+}
+
+.header {
+  height: 50px;
+  background-color: rgb(63, 81, 181);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header > h3 {
+  margin: 0 0 0 20px;
+}
+
+.example-container{
+  height: calc(100% - 50px);
+}
+
+.sidenav-content {
+  padding: 20px;
+}

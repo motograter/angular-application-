@@ -1,0 +1,62 @@
+<div class="servers">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Server Name</mat-label>
+    <input (input)="onUpdateServerName($event)" matInput [value]="serverName" />
+  </mat-form-field>
+
+  <!-- --- Two way data binding --- -->
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Server Name</mat-label>
+    <input [(ngModel)]="serverName" matInput />
+  </mat-form-field>
+
+  <!-- --- Two way data binding --- -->
+  <mat-form-field class="example-full-width">
+    <mat-label>User Name</mat-label>
+    <input [(ngModel)]="userName" matInput />
+  </mat-form-field>
+
+  <mat-label>User Name</mat-label>
+  <p>{{ userName }}</p>
+
+  <div class="btn-group">
+    <button
+      mat-stroked-button
+      color="primary"
+      [disabled]="userName === ''"
+      (click)="onResetUserName()"
+    >
+      Set User Name
+    </button>
+
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="!allowNewServer"
+      (click)="onCreareServer($event)"
+    >
+      Add Server
+    </button>
+  </div>
+
+  <div>
+    <!-- <p>{{ allowNewServer }}</p>
+    <p [innerText]="allowNewServer"></p>
+    <p>{{ serverCreationStatus }}</p> -->
+
+    <p *ngIf="serverCreated; else noServer">Server was created, server name is: {{ serverName }}</p>
+    <p *ngIf="!serverCreated">
+      No server was created!
+      </p>
+    <ng-template #noServer>
+      <p>
+      No server was created!
+      </p>
+    </ng-template>
+    <p>
+      <app-server></app-server>
+      <app-server></app-server>
+      <app-server></app-server>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.servers {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}

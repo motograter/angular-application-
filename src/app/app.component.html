@@ -1,0 +1,24 @@
+<header class="header">
+  <h3>Angular App</h3>
+</header>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode="side" opened >
+    <p>Auto-resizing sidenav</p>
+    <p>Lorem, ipsum dolor sit amet consectetur.</p>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <app-servers> </app-servers>
+    <!-- <div app-servers> </div> -->
+    <button mat-flat-button class="bg-tomato" disableRipple color="primary">
+      Primary
+    </button>
+    <button type="button" mat-button >
+      Toggle sidenav
+    </button>
+
+    <app-success-alert></app-success-alert>
+    <app-warning-alert></app-warning-alert>
+  </div>
+</mat-drawer-container>
