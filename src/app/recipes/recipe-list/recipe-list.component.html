@@ -1,0 +1,26 @@
+<div class="recipe-list">
+  <button mat-stroked-button class="bg-green text-white">Add Recipe</button>
+  <hr>
+  <mat-nav-list role="list" matLine>
+    <mat-list-item
+      disableRipple
+      role="listitem"
+      *ngFor="let recipe of recipies"
+    >
+      <a matLine href="...">
+        <div>
+          <h4>{{ recipe.name }}</h4>
+          <p>{{ recipe.description }}</p>
+        </div>
+      </a>
+      <span class="list-item__img">
+        <img
+          src="{{ recipe.imageSrc }}"
+          [src]="recipe.imageSrc"
+          style="height: 50px"
+        />
+      </span>
+      <!-- <app-recipe-item></app-recipe-item> -->
+    </mat-list-item>
+  </mat-nav-list>
+</div>

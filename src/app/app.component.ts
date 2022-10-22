@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Application';
+  showSecret = false
+  logs = []
+
+  onToggle(event){
+    console.log(event)
+    this.showSecret = !this.showSecret
+    this.logs.push(new Date().toISOString())
+  }
+
+  getIndex(log) {
+    return this.logs.indexOf(log)
+  }
 }

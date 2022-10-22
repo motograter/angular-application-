@@ -1,0 +1,32 @@
+<div class="recipe-detail">
+  <img alt="" src="" />
+
+  <section>
+    <h2>Recipe Name</h2>
+  </section>
+
+  <button
+    #menuTrigger="matMenuTrigger"
+    mat-flat-button
+    color="primary"
+    [matMenuTriggerFor]="menu"
+  >
+    <span>Menage Recipe</span>
+    <mat-icon
+      [fontIcon]="menuTrigger.menuOpen ? 'arrow_drop_down' : 'arrow_drop_up'"
+    >
+      <!-- {{menuTrigger.menuOpen ? "arrow_drop_down" : "arrow_drop_up" }} -->
+    </mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <a href="" mat-menu-item>
+      <span> To Shopping List</span>
+    </a>
+    <a href="" mat-menu-item>
+      <span>Edit Recipe</span>
+    </a>
+    <a href="" mat-menu-item>
+      <span>Delete Recipe</span>
+    </a>
+  </mat-menu>
+</div>

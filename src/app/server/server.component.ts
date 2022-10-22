@@ -4,6 +4,9 @@ import { Component } from "@angular/core";
   selector: "app-server",
   templateUrl: "./server.component.html",
   styles: [`
+    .small-btn {
+      margin: '10px 10px'
+    }
     .online {
         color: white;
     }

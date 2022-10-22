@@ -1,24 +1,37 @@
-<header class="header">
-  <h3>Angular App</h3>
-</header>
+<app-header></app-header>
 
 <mat-drawer-container class="example-container" autosize>
-  <mat-drawer mode="side" opened >
-    <p>Auto-resizing sidenav</p>
-    <p>Lorem, ipsum dolor sit amet consectetur.</p>
+  <mat-drawer mode="side" opened>
+   <app-side-navbar></app-side-navbar>
   </mat-drawer>
 
-  <div class="sidenav-content">
-    <app-servers> </app-servers>
+  <div class="content">
+    <app-recipes></app-recipes>
+    <shopping-list></shopping-list>
+    <!-- <app-servers> </app-servers> -->
     <!-- <div app-servers> </div> -->
-    <button mat-flat-button class="bg-tomato" disableRipple color="primary">
+    <!-- <button mat-flat-button class="bg-tomato" disableRipple color="primary">
       Primary
     </button>
-    <button type="button" mat-button >
-      Toggle sidenav
-    </button>
+    <button type="button" mat-button>Toggle sidenav</button>
 
     <app-success-alert></app-success-alert>
     <app-warning-alert></app-warning-alert>
+    <button
+      (click)="onToggle($event)"
+      mat-flat-button
+      class="small-btn"
+      color="primary"
+    >
+      Display Details
+    </button>
+    <p *ngIf="showSecret">Secret password = tuna</p>
+    <div
+      *ngFor="let log of logs; let index = index"
+      [ngStyle]="{ backgroundColor: getIndex(log) >= 4 && 'blue' }"
+      [ngClass]="{ 'text-white': index >= 4 }"
+    >
+      {{ log }}
+    </div> -->
   </div>
 </mat-drawer-container>

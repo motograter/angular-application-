@@ -1,0 +1,18 @@
+.recipies {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe-list-container {
+  flex: 1 0 auto;
+}
+
+.recipe-detail-container {
+  flex: 4 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .recipies {
+    flex-direction: column;
+  }
+}

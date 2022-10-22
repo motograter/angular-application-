@@ -1,0 +1,12 @@
+.mat-list-item {
+    height: max-content;
+    border-radius: 4px;
+    border: 1px solid gainsboro;
+    padding: 5px 0;
+    margin-bottom: 4px;
+}
+
+.list-item__img {
+    display: flex;
+    align-items: center;
+}
