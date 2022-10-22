@@ -1,5 +1,27 @@
 <div class="shopping-list">
-    <app-shopping-edit> </app-shopping-edit>
-    <hr>
-    list
-</div>
+
+    <app-shopping-edit></app-shopping-edit>
+
+    <mat-nav-list role="list" matLine>
+      <mat-list-item
+        disableRipple
+        role="listitem"
+        *ngFor="let ingredient of ingredients"
+      >
+        <a matLine href="...">
+          <div>
+            <span>{{ ingredient.name }}</span>
+            <span>({{ ingredient.amount }})</span>
+          </div>
+        </a>
+        <span class="list-item__img">
+          <!-- <img
+            src="{{ recipe.imageSrc }}"
+            [src]="recipe.imageSrc"
+            style="height: 50px"
+          /> -->
+        </span>
+
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
